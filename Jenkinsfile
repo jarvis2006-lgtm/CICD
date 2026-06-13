@@ -16,13 +16,13 @@ pipeline {
         }
 
         stage('Deploy') {
-            steps {
-                echo 'Deploying...'
-                sh '''
-                cp -r dist/* /var/www/html/
-                sudo systemctl restart nginx
-                '''
-            }
-        }
+    steps {
+        echo 'Deploying...'
+        sh '''
+        sudo cp -r dist/* /var/www/html/
+        sudo systemctl restart nginx
+        '''
+    }
+}
     }
 }

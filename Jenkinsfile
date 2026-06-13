@@ -16,8 +16,8 @@ pipeline {
         }
 
         stage('Deploy') {
-    steps {
-        echo 'Deploying...'
+        steps {
+        echo 'Deploying application'
         sh '''
         sudo cp -r dist/* /var/www/html/
         sudo systemctl restart nginx
